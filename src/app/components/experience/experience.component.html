@@ -1,0 +1,38 @@
+<section class="experience-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Professional Experience</h2>
+
+    <div class="timeline">
+      <div *ngFor="let exp of experiences; let i = index" class="timeline-item">
+        <div class="timeline-card" [class.expanded]="expandedIndex === i">
+          <div class="timeline-header" (click)="toggleExpand(i)">
+            <div class="timeline-period">{{ exp.period }}</div>
+            <h3 class="timeline-position">{{ exp.position }}</h3>
+            <h4 class="timeline-company">{{ exp.company }} - {{ exp.location }} <img [src]="exp.flag" width="20" height="20"/></h4>
+            <div class="timeline-project">Project: {{ exp.project }}</div>
+            <div class="timeline-team">Team: {{ exp.team }}</div>
+            <div class="timeline-toggle">
+              <i class="bi" [class.bi-chevron-down]="expandedIndex !== i" [class.bi-chevron-up]="expandedIndex === i"></i>
+            </div>
+          </div>
+
+          <div class="timeline-content" *ngIf="expandedIndex === i">
+            <div class="responsibilities">
+              <h5>Key Responsibilities:</h5>
+              <ul>
+                <li *ngFor="let resp of exp.responsibilities">{{ resp }}</li>
+              </ul>
+            </div>
+
+            <div class="technologies">
+              <h5>Technologies Used:</h5>
+              <div class="tech-tags">
+                <span class="tech-tag" *ngFor="let tech of exp.technologies">{{ tech }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

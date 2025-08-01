@@ -1,0 +1,157 @@
+.experience-section {
+  background-color: #f8f9fa;
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-weight: 600;
+  color: #0d6efd;
+  position: relative;
+  padding-bottom: 15px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #6c757d;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #0d6efd;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-card {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-header {
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.timeline-period {
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.timeline-position {
+  font-size: 1.25rem;
+  color: #212529;
+  margin-bottom: 5px;
+}
+
+.timeline-company {
+  font-size: 1.1rem;
+  color: #495057;
+  margin-bottom: 5px;
+}
+
+.timeline-project, .timeline-team {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.timeline-toggle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #0d6efd;
+}
+
+.timeline-content {
+  padding-top: 15px;
+  border-top: 1px solid #dee2e6;
+  margin-top: 10px;
+}
+
+.responsibilities h5, .technologies h5 {
+  font-size: 1rem;
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+.responsibilities ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.responsibilities li {
+  margin-bottom: 5px;
+  color: #6c757d;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  background-color: #e9f0fe;
+  color: #0d6efd;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+}

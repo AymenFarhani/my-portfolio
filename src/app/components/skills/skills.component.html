@@ -1,0 +1,38 @@
+<section class="skills-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Technical Skills</h2>
+
+    <!-- Category Filter -->
+    <div class="skills-filter mb-4">
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <button *ngFor="let category of categories"
+                class="btn btn-outline-primary"
+                [class.active]="activeCategory === category"
+                (click)="filterSkills(category)">
+          {{ category }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="skills-grid">
+      <div *ngFor="let skill of getFilteredSkills()" class="skill-card">
+        <div class="skill-info">
+          <h5 class="skill-name">{{ skill.name }}</h5>
+          <div *ngIf="skill.level" class="skill-level">
+            <div class="progress">
+              <div class="progress-bar"
+                   role="progressbar"
+                   [style.width]="getProgressWidth(skill.level)"
+                   [attr.aria-valuenow]="skill.level"
+                   aria-valuemin="0"
+                   aria-valuemax="5">
+              </div>
+            </div>
+            <span class="level-text">Level: {{ skill.level }}/5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

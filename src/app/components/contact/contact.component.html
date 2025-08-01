@@ -1,0 +1,132 @@
+<section class="contact-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Get In Touch</h2>
+
+    <div class="row">
+      <!-- Contact Info -->
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <div class="contact-info-card">
+          <h3 class="mb-4">Contact Information</h3>
+
+          <div class="contact-method" *ngIf="contactInfo.linkedin">
+            <div class="contact-icon">
+              <i class="bi bi-linkedin"></i>
+            </div>
+            <div class="contact-details">
+              <h5>LinkedIn</h5>
+              <a [href]="'https://' + contactInfo.linkedin" target="_blank">
+                {{ contactInfo.linkedin }}
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-method" *ngIf="contactInfo.github">
+            <div class="contact-icon">
+              <i class="bi bi-github"></i>
+            </div>
+            <div class="contact-details">
+              <h5>GitHub</h5>
+              <a [href]="'https://' + contactInfo.github" target="_blank">
+                {{ contactInfo.github }}
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-method" *ngIf="contactInfo.medium">
+            <div class="contact-icon">
+              <i class="bi bi-medium"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Medium</h5>
+              <a [href]="'https://' + contactInfo.medium" target="_blank">
+                {{ contactInfo.medium }}
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-method" *ngIf="contactInfo.email">
+            <div class="contact-icon">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Email</h5>
+              <a [href]="'mailto:' + contactInfo.email">
+                {{ contactInfo.email }}
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-method" *ngIf="contactInfo.phone">
+            <div class="contact-icon">
+              <i class="bi bi-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Phone</h5>
+              <a [href]="phoneHref">
+                  {{ contactInfo.phone }}
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-method" *ngIf="contactInfo.address">
+            <div class="contact-icon">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Location</h5>
+              <span>{{ contactInfo.address }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="contact-form-card">
+          <h3 class="mb-4">Send Me a Message</h3>
+
+          <form (ngSubmit)="submitForm()" *ngIf="!isSubmitted; else thankYou">
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name"
+                     [(ngModel)]="formData.name" name="name" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email"
+                     [(ngModel)]="formData.email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject"
+                     [(ngModel)]="formData.subject" name="subject" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5"
+                        [(ngModel)]="formData.message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" [disabled]="isLoading">
+              <span *ngIf="!isLoading">Send Message</span>
+              <span *ngIf="isLoading">
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span role="status">Sending...</span>
+              </span>
+            </button>
+          </form>
+
+          <ng-template #thankYou>
+            <div class="alert alert-success mt-4">
+              <h4>Thank you for your message!</h4>
+              <p class="mb-0">I'll get back to you as soon as possible.</p>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+<section class="certifications-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Certifications</h2>
+
+    <div class="certifications-grid">
+      <div *ngFor="let cert of certifications" class="certification-card">
+        <div class="certification-icon">
+          <i class="bi" [class]="cert.icon"></i>
+        </div>
+        <div class="certification-content">
+          <h3 class="certification-title">{{ cert.title }}</h3>
+          <a [href]="cert.credlyLink" target="_blank" class="certification-link">View Certificate</a>
+          <div class="certification-meta">
+            <span class="certification-issuer">{{ cert.issuer }}</span>
+            <span class="certification-date">{{ cert.date }}</span>
+          </div>
+          <p class="certification-description">{{ cert.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

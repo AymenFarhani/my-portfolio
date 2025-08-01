@@ -1,0 +1,8 @@
+footer a:hover {
+  color: #0d6efd !important;
+  transition: color 0.2s ease;
+}
+
+footer hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
