@@ -1,115 +1,110 @@
-.home-container {
-  width: 100%;
-  height: 100vh;
+.about-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f9fa;
-  overflow: hidden;
-}
-
-.tech-row {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  gap: 1rem;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-.tech-card {
-  position: relative;
-  flex: 1;
-  overflow: hidden;
-  transition: all 0.5s ease;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.tech-card:hover {
-  flex: 1.2;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.image-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
+  min-height: 80vh;
   padding: 2rem;
-  box-sizing: border-box;
 }
 
-.tech-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  transition: transform 0.5s ease;
-  filter: grayscale(20%);
+.profile-intro {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
-.tech-card:hover .tech-image {
-  transform: scale(1.05);
-  filter: grayscale(0%);
-}
-
-.tech-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-  color: white;
-  padding: 2rem;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-}
-
-.tech-card:hover .tech-overlay {
-  transform: translateY(0);
-}
-
-.tech-overlay h3 {
-  font-size: 1.5rem;
+.intro-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
   margin-bottom: 0.5rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.5px;
 }
 
-.tech-overlay p {
-  font-size: 1rem;
-  margin: 0;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+.intro-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .tech-row {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0.5rem;
-  }
+.intro-text {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #34495e;
+}
 
-  .tech-card {
-    height: 33.33vh;
-  }
+.highlight-paragraph {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
 
-  .image-container {
-    padding: 1rem;
-  }
+.highlight {
+  color: #4a6fa5;
+  font-weight: 600;
+}
 
-  .tech-overlay {
+.skill {
+  display: inline-block;
+  background-color: #e9f0fe;
+  color: #4a6fa5;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 500;
+  margin: 0 0.2rem;
+}
+
+.separator {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ddd, transparent);
+  margin: 2rem 0;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animation */
+.profile-intro {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
     transform: translateY(0);
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-intro {
+    padding: 2rem;
   }
 
-  .tech-overlay h3 {
-    font-size: 1.2rem;
+  .intro-title {
+    font-size: 2rem;
   }
 
-  .tech-overlay p {
-    font-size: 0.9rem;
+  .intro-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .separator {
+    margin: 1.5rem auto;
   }
 }
