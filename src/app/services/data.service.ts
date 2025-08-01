@@ -35,7 +35,7 @@ export class DataService {
       { name: 'ASP.NET Core', category: 'Other Stacks', level: 3 },
       { name: 'Entity Framework Core', category: 'Other Stacks', level: 3 },
       { name: 'Python', category: 'Other Stacks', level: 3 },
-      { name: 'Oddo ERP', category: 'Other Stacks', level: 3 },
+      { name: 'Odoo ERP', category: 'Other Stacks', level: 3 },
 
       // Tools
       { name: 'IntelliJ IDEA', category: 'Tools', level: 5 },
