@@ -256,7 +256,7 @@ export class DataService {
       issuer: 'Scrum.org',
       date: '11/2024',
       description: 'Validated knowledge of Scrum framework and ability to facilitate Scrum teams.',
-      icon: 'bi-award',
+      logo: 'assets/certifications/psm_1.png',
       credlyLink:'https://www.credly.com/badges/2188025b-06a8-4246-862b-a88e9b00298e'
     },
     {
@@ -264,7 +264,7 @@ export class DataService {
       issuer: 'HashiCorp',
       date: '03/2023',
       description: 'Demonstrated ability to use Terraform for infrastructure as code.',
-      icon: 'bi-cloud',
+      logo: 'assets/certifications/terraform.png',
       credlyLink: 'https://www.credly.com/badges/3e7043d6-0ad9-411d-9cbe-c45f423e3f57'
     },
     {
@@ -272,7 +272,7 @@ export class DataService {
       issuer: 'Scrum.org',
       date: '11/2022',
       description: 'Proven skills in building software using Scrum methodology.',
-      icon: 'bi-code-slash',
+      logo: 'assets/certifications/psd_1.png',
       credlyLink: 'https://www.credly.com/badges/f2ffe7b1-34c3-4974-b9cb-80e1863042f1'
     },
     {
@@ -280,7 +280,7 @@ export class DataService {
       issuer: 'Oracle',
       date: '05/2021',
       description: 'Validated expertise in Java programming language fundamentals.',
-      icon: 'bi-file-earmark-code',
+      logo: 'assets/certifications/java.png',
       credlyLink: 'https://www.credly.com/badges/ed85ff98-0f39-4eea-b65f-d8695e889ebf'
     }
   ];
