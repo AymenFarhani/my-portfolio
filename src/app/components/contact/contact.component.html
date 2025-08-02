@@ -39,9 +39,7 @@
         </div>
         <div class="contact-details">
           <h3>Email</h3>
-          <a [href]="'mailto:' + contactInfo.email" class="contact-link">
-            {{ contactInfo.email }}
-          </a>
+            <span class="contact-text">{{ contactInfo.email }}</span>
         </div>
       </div>
 
@@ -52,9 +50,9 @@
         </div>
         <div class="contact-details">
           <h3>Phone</h3>
-          <a [href]="'tel:' + contactInfo.phone" class="contact-link">
+          <span class="contact-text">
             {{ contactInfo.phone }}
-          </a>
+          </span>
         </div>
       </div>
 

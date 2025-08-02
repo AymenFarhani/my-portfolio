@@ -76,7 +76,7 @@ export class DataService {
   getExperience(){
     return [
   {
-    company: 'Speds',
+    company: 'Speos',
     position: 'Information and Process Architect / Scrum Master',
     period: '01/2025 - Present',
     location: 'Brussels, Belgium',
