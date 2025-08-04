@@ -115,3 +115,14 @@
   gap: 2rem;
   margin-top: 2rem;
 }
+
+.media-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
