@@ -15,7 +15,7 @@ export class ContactComponent {
     linkedin: 'linkedin.com/in/aymen-farhani',
     github: 'github.com/AymenFarhani',
     medium: 'medium.com/@aymenfarhani28',
-    phone: '+32 490 12 57 23',
+    phone: '+32 492 77 49 39',
     email: 'aymenfarhani28@gmail.com',
     address: 'Brussels, Belgium'
   };
