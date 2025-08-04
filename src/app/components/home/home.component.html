@@ -17,4 +17,33 @@
           Expertise in <span class="skill">cloud-native architectures</span> (AWS/Docker) and <span class="skill">CI/CD best practices</span>. Proven track record in streamlining documentation and architectural processes.
         </p>
   </div>
+
 </div>
+<div class="media-grid">
+<!-- GitHub -->
+      <div class="contact-card" *ngIf="github">
+        <div class="contact-icon">
+          <i class="bi bi-github"></i>
+        </div>
+        <div class="contact-details">
+          <h3>GitHub</h3>
+          <a [href]="'https://' + github" target="_blank" class="contact-link">
+            {{ github.replace('github.com/', '') }}
+          </a>
+        </div>
+      </div>
+      <!-- Medium -->
+      <div class="contact-card" *ngIf="medium">
+        <div class="contact-icon">
+          <i class="bi bi-medium"></i>
+        </div>
+        <div class="contact-details">
+          <h3>Medium</h3>
+          <a [href]="'https://' + medium" target="_blank" class="contact-link">
+            {{ medium.replace('github.com/', '') }}
+          </a>
+        </div>
+      </div>
+</div>
+
+

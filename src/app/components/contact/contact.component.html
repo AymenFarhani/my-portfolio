@@ -19,30 +19,6 @@
         </div>
       </div>
 
-      <!-- GitHub -->
-      <div class="contact-card" *ngIf="contactInfo.github">
-        <div class="contact-icon">
-          <i class="bi bi-github"></i>
-        </div>
-        <div class="contact-details">
-          <h3>GitHub</h3>
-          <a [href]="'https://' + contactInfo.github" target="_blank" class="contact-link">
-            {{ contactInfo.github.replace('github.com/', '') }}
-          </a>
-        </div>
-      </div>
-      <!-- Medium -->
-      <div class="contact-card" *ngIf="contactInfo.medium">
-        <div class="contact-icon">
-          <i class="bi bi-medium"></i>
-        </div>
-        <div class="contact-details">
-          <h3>Medium</h3>
-          <a [href]="'https://' + contactInfo.medium" target="_blank" class="contact-link">
-            {{ contactInfo.medium.replace('github.com/', '') }}
-          </a>
-        </div>
-      </div>
 
       <!-- Email -->
       <div class="contact-card" *ngIf="contactInfo.email">
